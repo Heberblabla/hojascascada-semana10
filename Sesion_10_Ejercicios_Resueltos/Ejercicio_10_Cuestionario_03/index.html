@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuestionario 3: Funciones 2D y punto de origen</title>
+<style>body{margin:0;background:#f1f5f9;color:#0f172a;font-family:Arial,sans-serif;line-height:1.65}
+main{max-width:820px;margin:0 auto;padding:40px 20px 90px}
+h1{color:#4f46e5}h2{margin-top:28px;border-bottom:2px solid #e2e8f0;padding-bottom:6px}
+code{background:#e2e8f0;padding:2px 5px;border-radius:4px}pre{background:#0f172a;color:#e2e8f0;padding:16px;border-radius:10px;overflow:auto}pre code{background:none;padding:0}</style>
+<style id="btn-atras-css">
+.btn-atras{position:fixed;right:16px;bottom:16px;z-index:99999;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#111827;color:#fff;font:700 15px Arial,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);border:2px solid #fff;transition:transform .2s ease,background .2s ease}
+.btn-atras:hover,.btn-atras:focus-visible{background:#4f46e5;transform:translateX(3px)}
+</style></head><body><main><h1>Cuestionario 3: Funciones 2D y punto de origen</h1>
+<h2>Pregunta</h2>
+<p>Explique la diferencia entre translate(), rotate(), scale() y skew(). ¿Qué papel cumple transform-origin?</p>
+<h2>Respuesta justificada</h2>
+<ul>
+<li><code>translate(x,y)</code> desplaza visualmente el elemento: <code>translate(20px,-10px)</code> lo mueve a la derecha y arriba.</li>
+<li><code>rotate(45deg)</code> lo gira 45 grados alrededor de su origen.</li>
+<li><code>scale(1.2)</code> aumenta al 120 % su tamaño visual en ambos ejes.</li>
+<li><code>skew(15deg,5deg)</code> inclina sus ejes, deformando sus ángulos.</li>
+</ul>
+<p>Estas transformaciones no redistribuyen el espacio que el elemento ocupa en el flujo; por eso pueden superponerse visualmente a otros elementos.</p>
+<p><code>transform-origin</code> define el punto de referencia para la transformación. Su valor inicial es <code>50% 50%</code> (centro). Con <code>bottom center</code>, una aguja gira desde su base, como en el resuelto 2. Cambiar el origen influye en giros, escalas e inclinaciones; una traslación pura no cambia su desplazamiento por modificar ese origen.</p></main><a class="btn-atras" href="../../index.html">&#8592; Atrás</a></body></html>

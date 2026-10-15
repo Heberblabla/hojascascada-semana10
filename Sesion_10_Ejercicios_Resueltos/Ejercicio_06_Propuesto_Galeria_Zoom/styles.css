@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; }
+:focus-visible { outline: 3px solid #eab308; outline-offset: 5px; }
+body { padding: 40px 24px; background: #f1f5f9; color: #0f172a; }
+main { max-width: 1100px; margin: 0 auto; } header { margin-bottom: 32px; } header p { line-height: 1.6; color: #475569; }
+.galeria { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(280px,100%),1fr)); gap: 24px; }
+/* Entrada en el padre; zoom y descripción en hijos para separar transform. */
+.entrada { margin: 0; animation: entrada .7s ease-out both; }
+.entrada:nth-child(1) { animation-delay: 0s; }
+.entrada:nth-child(2) { animation-delay: .12s; }
+.entrada:nth-child(3) { animation-delay: .24s; }
+.entrada:nth-child(4) { animation-delay: .36s; }
+.entrada:nth-child(5) { animation-delay: .48s; }
+.entrada:nth-child(6) { animation-delay: .6s; }
+@keyframes entrada { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
+.marco { position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 640 / 420; background: #0f172a; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+figcaption { position: absolute; inset: auto 0 0; padding: 32px 20px 20px; background: linear-gradient(transparent,rgba(15,23,42,.95)); color: #fff; opacity: 0; transform: translateY(24px); transition: opacity .3s ease, transform .3s ease; }
+figcaption h2 { margin: 0 0 8px; font-size: 1.25rem; } figcaption p { margin: 0; line-height: 1.5; }
+.entrada:hover img,.entrada:focus-visible img { transform: scale(1.1); }
+.entrada:hover figcaption,.entrada:focus-visible figcaption { opacity: 1; transform: translateY(0); }
+/* En dispositivos sin hover, las descripciones quedan visibles. */
+@media (hover: none) { figcaption { opacity: 1; transform: none; } }
+
+/* Cambios inmediatos para quienes prefieren reducir el movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: 0s !important; transition-delay: 0s !important; }
+}

@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; }
+:focus-visible { outline: 3px solid #eab308; outline-offset: 5px; }
+body { min-height: 100vh; padding: 24px; display: grid; place-items: center; background: #0f172a; color: #fff; text-align: center; }
+h1 { font-size: clamp(1.6rem,5vw,2.4rem); } p { line-height: 1.6; color: #cbd5e1; }
+.hamburguesa { position: relative; display: block; margin: 32px auto; width: 84px; height: 84px; border: 1px solid #475569; border-radius: 20px; background: #1e293b; cursor: pointer; }
+.hamburguesa span { position: absolute; left: 20px; top: 39px; width: 42px; height: 4px; border-radius: 4px; background: #67e8f9; transform-origin: center center; transition: transform .3s ease, opacity .2s ease; }
+.hamburguesa span:nth-child(1) { transform: translateY(-12px); }
+.hamburguesa span:nth-child(3) { transform: translateY(12px); }
+/* Cada línea llega al centro; las externas giran alrededor de su centro. */
+.hamburguesa[aria-pressed="true"] span:nth-child(1) { transform: translateY(0) rotate(45deg); }
+.hamburguesa[aria-pressed="true"] span:nth-child(2) { opacity: 0; }
+.hamburguesa[aria-pressed="true"] span:nth-child(3) { transform: translateY(0) rotate(-45deg); }
+
+/* Cambios inmediatos para quienes prefieren reducir el movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: 0s !important; transition-delay: 0s !important; }
+}

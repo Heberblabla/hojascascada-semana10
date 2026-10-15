@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesto 4: Cubo 3D giratorio</title>
+  <link rel="stylesheet" href="styles.css">
+
+<style id="btn-atras-css">
+.btn-atras{position:fixed;right:16px;bottom:16px;z-index:99999;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#111827;color:#fff;font:700 15px Arial,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);border:2px solid #fff;transition:transform .2s ease,background .2s ease}
+.btn-atras:hover,.btn-atras:focus-visible{background:#4f46e5;transform:translateX(3px)}
+</style>
+</head>
+<body>
+  <main><h1>Cubo 3D</h1><p>Pasa el cursor o usa Tab: pausa el giro y amplía el cubo.</p>
+    <div class="escena" tabindex="0" role="img" aria-label="Cubo giratorio de seis caras; enfócalo para pausar y ampliar">
+      <div class="zoom"><div class="cubo">
+        <div class="cara frente">Frente</div><div class="cara atras">Atrás</div>
+        <div class="cara derecha">Derecha</div><div class="cara izquierda">Izquierda</div>
+        <div class="cara arriba">Arriba</div><div class="cara abajo">Abajo</div>
+      </div></div>
+    </div>
+  </main>
+<a class="btn-atras" href="../../index.html">&#8592; Atrás</a>
+</body>
+</html>

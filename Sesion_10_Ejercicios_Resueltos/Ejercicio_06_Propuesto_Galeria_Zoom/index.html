@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesto 3: Galería con zoom y entrada escalonada</title>
+  <link rel="stylesheet" href="styles.css">
+
+<style id="btn-atras-css">
+.btn-atras{position:fixed;right:16px;bottom:16px;z-index:99999;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#111827;color:#fff;font:700 15px Arial,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);border:2px solid #fff;transition:transform .2s ease,background .2s ease}
+.btn-atras:hover,.btn-atras:focus-visible{background:#4f46e5;transform:translateX(3px)}
+</style>
+</head>
+<body>
+  <main><header><h1>Seis paisajes</h1><p>Pasa el cursor o usa Tab para ver cada descripción.</p></header>
+  <div class="galeria">
+    <figure class="entrada" tabindex="0">
+      <div class="marco"><img src="imagenes/paisaje_01.svg" alt="Ilustración: cumbres al amanecer" width="640" height="420"><figcaption><h2>Montañas</h2><p>Cumbres al amanecer.</p></figcaption></div>
+    </figure>
+    <figure class="entrada" tabindex="0">
+      <div class="marco"><img src="imagenes/paisaje_02.svg" alt="Ilustración: bosque junto al lago" width="640" height="420"><figcaption><h2>Bosque</h2><p>Bosque junto al lago.</p></figcaption></div>
+    </figure>
+    <figure class="entrada" tabindex="0">
+      <div class="marco"><img src="imagenes/paisaje_03.svg" alt="Ilustración: dunas bajo el sol" width="640" height="420"><figcaption><h2>Desierto</h2><p>Dunas bajo el sol.</p></figcaption></div>
+    </figure>
+    <figure class="entrada" tabindex="0">
+      <div class="marco"><img src="imagenes/paisaje_04.svg" alt="Ilustración: olas y horizonte" width="640" height="420"><figcaption><h2>Océano</h2><p>Olas y horizonte.</p></figcaption></div>
+    </figure>
+    <figure class="entrada" tabindex="0">
+      <div class="marco"><img src="imagenes/paisaje_05.svg" alt="Ilustración: montañas bajo las estrellas" width="640" height="420"><figcaption><h2>Noche</h2><p>Montañas bajo las estrellas.</p></figcaption></div>
+    </figure>
+    <figure class="entrada" tabindex="0">
+      <div class="marco"><img src="imagenes/paisaje_06.svg" alt="Ilustración: campos verdes al atardecer" width="640" height="420"><figcaption><h2>Colinas</h2><p>Campos verdes al atardecer.</p></figcaption></div>
+    </figure>
+  </div></main>
+<a class="btn-atras" href="../../index.html">&#8592; Atrás</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesto 1: Menú lateral deslizable</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+<style id="btn-atras-css">
+.btn-atras{position:fixed;right:16px;bottom:16px;z-index:99999;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#111827;color:#fff;font:700 15px Arial,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);border:2px solid #fff;transition:transform .2s ease,background .2s ease}
+.btn-atras:hover,.btn-atras:focus-visible{background:#4f46e5;transform:translateX(3px)}
+</style>
+</head>
+<body>
+  <header><button id="abrir" type="button" aria-controls="lateral" aria-expanded="false">Menú</button><span>Transiciones CSS</span></header>
+  <nav id="lateral" class="lateral" aria-label="Menú lateral" aria-hidden="true" inert>
+    <button id="cerrar" type="button">Cerrar menú</button>
+    <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a>
+  </nav>
+  <main>
+    <section id="inicio"><h1>Menú lateral deslizable</h1><p>Pulsa Menú para mostrar la barra. Puedes cerrarla con Escape.</p></section>
+    <section id="servicios"><h2>Servicios</h2><p>Ejemplo de una sección enlazada desde el menú.</p></section>
+    <section id="contacto"><h2>Contacto</h2><p>Otra sección de demostración con destino local.</p></section>
+  </main>
+<a class="btn-atras" href="../../index.html">&#8592; Atrás</a>
+</body>
+</html>
